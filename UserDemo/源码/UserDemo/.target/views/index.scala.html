@@ -1,0 +1,57 @@
+@(users: com.avaje.ebean.Page[User])
+
+@import helper._
+
+@link(newPage:Int) = @{
+   
+    routes.Application.users(newPage)
+    
+}
+
+@main("User list") {
+    
+    <h1 style="margin-top:30px;">会员列表 </h1>
+    
+    <table class="table">
+        <tr>
+          <td>用户名</td>
+          <td>邮箱</td>
+        </tr>
+        @for(user <- users.getList) {
+            <tr>
+               <td> @user.username</td>
+               <td> @user.email</td>
+            </tr>
+            
+        }
+    </table>
+   <div class="pagination">
+    <ul>
+                @if(users.hasPrev) {
+                    <li class="prev">
+                        <a href="@link(users.getPageIndex - 1)">&larr; Previous</a>
+                    </li>
+                } else {
+                    <li class="prev disabled">
+                        <a>&larr; Previous</a>
+                    </li>
+                }
+                <li class="current">
+                    <a>显示从  @users.getDisplayXtoYofZ(" 到 "," 共 ")</a>
+                </li>
+                @if(users.hasNext) {
+                    <li class="next">
+                        <a href="@link(users.getPageIndex + 1)">Next &rarr;</a>
+                    </li>
+                } else {
+                    <li class="next disabled">
+                        <a>Next &rarr;</a>
+                    </li>
+                }
+            </ul>
+    </div>
+    
+    <a href="/user/register">注册</a>
+  
+   
+}

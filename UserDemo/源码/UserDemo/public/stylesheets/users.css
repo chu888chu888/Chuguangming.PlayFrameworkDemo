@@ -1,0 +1,48 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.lzp-box1{margin-top:30px; height:280px;}
+.lzp-lableTip {
+   width:160px;
+   line-height:25px;
+   float:left;
+   overflow:hidden;}
+
+.error{
+   color:red;
+   line-height:25px;
+   text-align:left;
+   width:325px;
+   float:right;}
+
+.photo{
+   float:left;
+   width:150px;
+   height:200px;   
+   border:1px solid lightgray;
+  
+}
+
+.login{
+   float:right;
+   margin-right:10px;
+   width:320px;
+   height:200px;   
+   border:1px solid lightgray;
+   
+}
+.login table{
+    font-family:'微软雅黑';
+	margin-left:30px;margin-top:50px;width:250px;height:100px;
+}
+.login table tr td{
+   border:1px solid lightgray;
+   padding:5px;
+}
+.login .bn{
+   width:200px;
+   margin-left:auto;
+   margin-right:auto;
+   padding-left:60px;
+}

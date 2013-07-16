@@ -1,0 +1,58 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/bootstrap-responsive.css")">
+        
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+    </head>
+    <style type="text/css">
+           body{
+               padding-top: 50px;
+               
+           }
+		  
+    </style>
+      <body>
+<div class="navbar navbar-fixed-top" >
+  <div class="navbar-inner" >
+  <div class="container">
+    <a class="brand" href="/" >UserDemo</a>
+    <ul class="nav">
+      <li class="active"><a href="/">Index</a></li>
+      <li><a href="/user/login">Login</a></li>
+      <li><a href="/user/register">Rigster</a></li>
+	 
+    </ul>
+	
+	
+	  <div style="margin: 12px 0 0 0; float:right;">
+			
+	  </div>
+	
+   
+
+   
+   
+  </div>
+  </div>
+</div>
+	 
+   
+ <div id="container" class="container">
+  @content
+
+  <footer style="margin-top:100px; text-align:left">
+       by lzp. d_tm#qq.com 2013~2015.
+  </footer>
+ </div>
+
+  
+  </body>
+</html>

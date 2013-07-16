@@ -1,0 +1,21 @@
+@(userForm: Form[User])
+
+@import helper._
+
+@main("User Register") {
+   
+   
+   <h2>Register</h2>
+    
+    @form(routes.Application.doRegister()) {
+        
+        @inputText(userForm("username") ,'_label -> "用户名") 
+         @inputPassword(userForm("password"),'_label -> "口令") 
+          @inputText(userForm("email"),'_label -> "邮箱") 
+     <div class="form-actions">          
+        <button class="btn btn-primary" type="submit">注册</button>	
+         
+     </div>   
+    }
+    
+}

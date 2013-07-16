@@ -1,0 +1,21 @@
+@(userForm: Form[User])
+
+@import helper._
+
+@main("User Login") {
+   
+   
+   <h2>Login</h2>
+    
+    @form(routes.Application.doLogin()) {
+        
+        @inputText(userForm("username"),'_label -> "用户名") 
+         @inputPassword(userForm("password"),'_label -> "密码") 
+         
+        <div class="form-actions">          
+        <button class="btn btn-primary" type="submit">登陆</button>	
+        
+     </div> 
+    }
+    
+}
